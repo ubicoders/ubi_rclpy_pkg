@@ -1,4 +1,9 @@
 from setuptools import setup
+#=============
+import glob
+import os
+#=============
+
 
 package_name = 'ubi_rclpy_pkg'
 
@@ -9,6 +14,9 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
+        #=============
+        ('share/' + package_name, glob.glob(os.path.join('launch', '*.launch.py'))),
+        #=============
         ('share/' + package_name, ['package.xml']),
     ],
     install_requires=['setuptools'],
