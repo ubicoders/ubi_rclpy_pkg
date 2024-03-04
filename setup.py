@@ -29,7 +29,11 @@ setup(
     entry_points={
         'console_scripts': [
             'hellopy_publisher = ubi_rclpy_pkg.hellopy_publisher:main',
-            'hellopy_subscriber = ubi_rclpy_pkg.hellopy_subscriber:main'
+            'hellopy_subscriber = ubi_rclpy_pkg.hellopy_subscriber:main',
+            'calc_optimal_path = ubi_rclpy_pkg.interface_srv_server:main',
+            'calc_optimal_path_client = ubi_rclpy_pkg.interface_srv_client:main',
+            'takeoff_action_server = ubi_rclpy_pkg.interface_action_server:main',
+            'takeoff_action_client = ubi_rclpy_pkg.interface_action_client:main',
         ],
     },
 )
